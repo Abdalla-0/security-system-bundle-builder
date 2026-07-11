@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0B0D10;
+  --card: #ffffff;
+  --card-foreground: #1F1F1F;
+  --primary: #4E2FD2;
+  --primary-foreground: #ffffff;
+  --surface: #EDF4FF;
+  --surface-foreground: #484848;
+  --success: #0AA288;
+  --muted: #A8B2BD;
+  --border-base: #CCCCCC;
+  --border-light: #CED6DE;
+  --border-dark: #1F1F1F;
+  --ring: #E6EBF0;
+  --radius: 0.3125rem;
+}
+
+@theme inline {
+  /* fonts  */
+  --font-sans: var(--font-gilroy);
+  --font-norms: var(--font-norms);
+  /* colors  */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-success: var(--success);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border-base);
+  --color-border-light: var(--border-light);
+  --color-border-dark: var(--border-dark);
+  --color-ring: var(--ring);
+  /* radius  */
+  --radius-lg: calc(var(--radius) * 2);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+
+  h1,
+  .h1 {
+    @apply text-[31.88px] font-bold tracking-[-0.06px] leading-[110.00000000000001%];
+  }
+
+  h2,
+  .h2 {
+    @apply text-[22px] font-semibold leading-[100%] tracking-[0.6px];
+  }
+
+  h3,
+  .h3 {
+    @apply text-base font-semibold leading-[100%] tracking-[0.6px];
+  }
+
+  h4,
+  .h4 {
+    @apply text-sm font-medium leading-4 tracking-[0.5px];
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  a {
+    @apply text-[#0000EE] underline;
+  }
+
+  p {
+    @apply text-[#1F1F1FBF]/75 leading-[130%] tracking-[0.6px] font-medium;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto md:px-8
+  }
+
+  .element-center {
+    @apply flex justify-center items-center
+  }
+}
